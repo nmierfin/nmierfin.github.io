@@ -144,8 +144,16 @@
 
                     ...
                     </pre>
- 
-                    
+                    <br>
+                    <h5 class="mb-0">The API</h5>
+                    <p>I used the Interactive Broker Trader Workstation API to implement the algorithm. Specifically the language used was C++. I think the API is quite powerful although the C++ implementation shipped with some built in library issues.</p>
+                    <br>
+                    <p>Currencies deal with decimal fractional values quite often, especially since all currencies have two decimal points of accuracy. The double floating point representation does not deal with some of these decimal fractional points well. For example, 0.3 can be represented most accurately as 0.299999999999999988897769. This can be an issue when submitted orders for various securities.</p>
+                    <br>
+                    <p>As a solution around this the API includes a library that allows one to use Decimal floating-point arithmetic according to IEEE 754-2008. The libraries can be found on Intel’s website at this link.</p>
+                    <br>
+                    <p>The API shipped with this library built in although for some reason it did not work when compiling. Therefore, I had to download the code from the link previously provided and compile/assemble them myself using the batch files provided in the download. This ended up fixing the issue.</p>
+                    <br>
                     <p class="card-text ml-4 mb-4 fs-6" style="text-indent: 0px; font-weight: bold;">- Nicholas Ierfino</p>
                     
                 </div>
