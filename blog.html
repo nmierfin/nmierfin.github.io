@@ -150,7 +150,7 @@
                     <br>
                     <p>Currencies deal with decimal fractional values quite often, especially since all currencies have two decimal points of accuracy. The double floating point representation does not deal with some of these decimal fractional points well. For example, 0.3 can be represented most accurately as 0.299999999999999988897769. This can be an issue when submitted orders for various securities.</p>
                     <br>
-                    <p>As a solution around this the API includes a library that allows one to use Decimal floating-point arithmetic according to IEEE 754-2008. The libraries can be found on Intel’s website at this link.</p>
+                    <p>As a solution around this the API includes a library that allows one to use Decimal floating-point arithmetic according to IEEE 754-2008. The libraries can be found on Intel’s website at <<a href="https://www.intel.com/content/www/us/en/developer/articles/tool/intel-decimal-floating-point-math-library.html" title="Watch the Dev Log" role="button">>this link</a>.</p>
                     <br>
                     <p>The API shipped with this library built in although for some reason it did not work when compiling. Therefore, I had to download the code from the link previously provided and compile/assemble them myself using the batch files provided in the download. This ended up fixing the issue.</p>
                     <br>
