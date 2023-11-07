@@ -112,17 +112,35 @@
                     <br>
                     <p class="card-text ml-4 mb-4 fs-6">The pseudocode is as follows:</p>
                     <br>
-                      <pre class='brush: cpp'>
-  // my first program in C++
-  #include <iostream>
-  using namespace std;
+                    <pre class='brush: cpp'>
+                     Xi = stock price
+                    Ai = (bi*So)/Xi
+                        
+                    Ai will be a fraction. We have to truncate the fraction.
+                    ai (little a) will be the fraction portion of the stock 
+                    
+                    Y = amount that is left 
+                    Y = (a1*X1) + (a2*X2) + ….
+                    
+                    Organize the stock prices in a sequence from largest to smallest (vi). 
+                    Now compare Y to the first stock: 
+                    
+                    If Y < v1 
+                    Move on to the next vi 
+                    Else if Y >= vi 
+                    Take the modulo of Y and vi. Buy the amount of the mod of vi. 
+                    Calculate the amount of cash left: 
+                    Y := Y-modamount*vi
+                    
+                    If Y < v2
+                    Move on to the next vi 
+                    Else if Y >= vi 
+                    Take the modulo of Y and vi. Buy the amount of the mod of vi. 
+                    Calculate the amount of cash left: 
+                    Y := Y-modamount*vi
 
-  int main ()
-  {
-    cout << "Hello World!";
-    return 0;
-  }
-  </pre>
+                    ...
+                    </pre>
  
                     
                     <p class="card-text ml-4 mb-4 fs-6" style="text-indent: 0px; font-weight: bold;">- Nicholas Ierfino</p>
