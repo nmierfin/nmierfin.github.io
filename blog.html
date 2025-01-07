@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<!-- Website SVG From https://www.svgrepo.com/svg/209654/cpu-chip -->
+<!-- Test -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nicholas Ierfino</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Custom Styles and Overrides -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;300;400;500;600;700&family=Patua+One&display=swap" rel="stylesheet"> 
+
+    <!-- Website Title Icon -->
+    <link rel="shortcut icon" href="img/logo-no-background.png" type="image/x-icon">
+</head>
+
+<body id="blog" class="bg-light d-flex flex-column h-100">
+
+    <!-- NavBar -->
+    
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    
+        <div class="container">
+            <a class="navbar-brand my-auto" href="index.html">
+                <img id="home" class="d-inline-block align-text-bottom" src="/img/logo-no-background.png" alt="CPU Chip Logo" width="50"
+                    viewBox="0 0 100 100">
+                <h2 class="d-inline-block mx-2 mb-0">Nicholas Ierfino</h2>
+            </a>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="nav nav-tabs navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-expanded="false">Projects</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="cs.html">Engineering</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="other.html">Other</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="skills.html">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="edu.html">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <!-- Image of Computer Screen with Code from https://al.nd.edu/assets/380450/1000x562/bacs_code.jpg -->
+    <div id="hero" class="p-5 mb-4 bg-dark text-light">
+        <div class="container py-5">
+            <h1 class="display-2">Nicholas' Blog</h1>
+            <p class="col-md-8 fs-4" style="text-indent: 0px;">Take a look at my latest exploits and opinions.
+            </p>
+        </div>
+    </div>
+
+    <!-- My Image and Description -->
+
+     <div class="container">
+        <div class="row">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-8 shadow-sm h-md-250 position-relative">
+                <div class="p-4 d-flex flex-column position-static">
+                    
+                    <h3 class="mb-0">Anticorrelation Bot</h3>
+                    <div class="mb-4 text-muted">Wednesday: January  31st, 2024</div>
+                    <br>
+                    <h5 class="mb-0">Introduction</h5>
+                    <p class="card-text ml-4 mb-4 fs-6">After experimenting with the passive aggressive mean reversion strategy, I did not get the results that I was expecting. I found that when the algorithm rebalanced the portfolio by putting money on stocks that were performing poorer, under the assumption that the poorer performing stocks would revert back to their mean, some stocks would create what I would like to call a sink. What I mean by this is that when the stock underperforms it’s average the algorithm would rebalance by putting a larger proportion of wealth on that stock (which is expected) but if the stock continuously does bad over a sustained period of time the algorithm would double down, so to speak, by putting a larger and larger portion of that entire wealth since it is assuming that it will eventually go up to the average. In the paper, it tries to avoid this by calling a passive state. The passive state is supposed to stop rebalancing entirely provided that the loss function is under a specific threshold. The problem with this is that it’s hard to calibrate this threshold and as the stock continues sustained losses that are under this one will continue to lose money as that particular stock goes down. Due to this nature, it seemed like the algorithm performed better when the mean reversion property of the stock had a higher frequency. I found that the Canadian stocks had a higher mean reverting frequency than the American ones and as a result it did better on the Canadian market. Due to this I decided to implement a new strategy for the American market.</p>
+                    <br>
+                    <h5 class="mb-0">The Strategy</h5>
+                    <p class="card-text ml-4 mb-4 fs-6">The strategy that I found was called the anticorrelation algorithm. The paper to the algorithm can be found <a href="https://arxiv.org/pdf/1107.0036.pdf" title="Watch the Dev Log" role="button">here</a>. </p>
+                    <br>
+                    <p class="card-text ml-4 mb-4 fs-6">Essentially, the way the algorithm works is that when the average of one stock is higher than another and the stocks are sufficiently anticorrelated (meaning that when one goes up the other goes down) and the stock with the higher average is anticorrelated with itself (meaning that it is probably going to go down soon) one should take the money from the higher average stock and put it into the lower average stock. </p>
+                    <br>
+                    <h5 class="mb-0">The Results</h5>
+                    <p class="card-text ml-4 mb-4 fs-6">Before implementing the strategy on the actual market, I found it necessary to back test it on historical market values. This is something that I had yet to do on my other trading strategy. Given that I was using C++ to code the strategy I found that there was a lack of back testing software out there for that particular language. Most of the back testing software was only usable with Python such as Backtrader (the link to which can be found <a href="https://www.backtrader.com/" title="Watch the Dev Log" role="button">here</a>). </p>
+                    <br>
+                    <p class="card-text ml-4 mb-4 fs-6">I searched through the internet for back testing systems usable with C++ where I found this link for ones available on GitHub for public use. The problem was that the ones available did not have much documentation so it would take me a long time to parse through the code and figure it out myself. </p>
+                    <br>
+                    <p class="card-text ml-4 mb-4 fs-6">As a result, I decided to come up with one myself that would utilize the Interactive Broker’s API to fetch historical data. The results of the back testing system can be found in the image below.</p>
+                    <br>
+                    <img src="/img/Screenshot1.png" style="width: 50%;" class="card-img-top" alt="Back Test Results">
+                    <br>
+                    <h5 class="mb-0">Conclusion</h5>
+                    <p class="card-text ml-4 mb-4 fs-6">To conclude, I have already started implementing the strategy on the American market. Just anecdotally, it seems like this strategy is already performing better than the previous one. </p>    
+                    <br>
+                    <p class="card-text ml-4 mb-4 fs-6">Moving forward I am going to implement the Universal Portfolio strategy developed by Thomas M. Cover. The paper to which can be found <a href="https://web.mit.edu/6.454/www/www_fall_2001/shaas/universal_portfolios.pdf" title="Watch the Dev Log" role="button">here</a>. In the previous papers that I have read , they don’t really go into any theoretical proof that the performance of the strategy is optimal when compared to a benchmark. They just use heuristic methods combined with some type of empirical testing to show that it works to make money on historical data. This paper seems to go above and beyond in regards to it’s theoretical usefulness which is probably the reason why it’s been cited so many times. </p>
+                    <p class="card-text ml-4 mb-4 fs-6" style="text-indent: 0px; font-weight: bold;">- Nicholas Ierfino</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-8 shadow-sm h-md-250 position-relative">
+                <div class="p-4 d-flex flex-column position-static">
+                    
+                    <h3 class="mb-0">It’s Alive! A Mary Shelley Interpretation of Current AI Culture</h3>
+                    <div class="mb-4 text-muted">Friday: January  26th, 2024</div>
+                    <br>
+                    <h5 class="mb-0">Introduction</h5>
+                    <p class="card-text ml-4 mb-4 fs-6">As many of you already know, the story of Mary Shelley’s Frankenstein is a novel revolving around the exploits of an eccentric scientist by the name of Victor Frankenstein. It’s considered one of the earliest works of science fiction and has had a significant impact on literature and popular culture. Surprisingly, despite the novel being published in 1818, it is  amazingly allegorical to modern day life especially in the today’s information age. The novel’s themes which include the consequences of playing god, the dangers of unchecked scientific ambition, and the nature of humanity have never been more prevalent than ever especially in regards to AI.</p>
+                    <br>
+                    <p class="card-text ml-4 mb-4 fs-6">For those of you who don’t know, the areas of machine learning (especially in the facet of neural networks) is a relatively new field in the eyes of the computer science industry. Several important scientific figures have come up with their techniques only within the past 40 years or so; with the seeds being laid in the field by Frank Rosenblatt sometime in the 50s through the creation of the perceptron. The neural network field floundered in the 60s and 70s seeing a resurgence sometime around the 1980s. This resurgence was none more important than for the contributions of a computer scientist by the name of Geoffrey Hinton who along with the help of David Rumelhart and Ronald Williams made important contributions to the development of backpropagation.</p>
+                    <br>
+                    <h5 class="mb-0">The Parallels</h5>
+                    <p class="card-text ml-4 mb-4 fs-6">I find it very amusing and at the same time scary the parallels between the revolutions of neural networks and the themes taught in Mary Shelley’s book. In the book, Victor Frankenstein becomes obsessed with the idea of creating life. Eventually he succeeds in bringing a creature to life through his scientific experiments, but is horrified by his creation whereby he abandons it. The creature feeling abandoned by it’s creator becomes bitter and eventually seeks revenge. The monster even kills Victor’s wife. In the end, Dr. Frankenstein dies having wished he never made it at all. This is directly emblematic to humanities plight to harness human intelligence in the form of machines with Geoffry Hinton allegorically shadowing Dr. Frankenstein.</p>
+                    <br>
+                    <p class="card-text ml-4 mb-4 fs-6">Geoffry Hinton has been very outspoken recently about his absolute reversion to the use of his research. He has even outright called out the existential threat of modern AI and the manipulative uses of big corporations to replace the need for human labour. I think it goes without saying but if AI were to fundamentally mimic human thought and behaviour it would be the end of the modern capitalistic system as we know it; with the need for the transfer of wealth to be nonexistent. This is primarily due to the fact that the economy needs money to change hands to satisfy demand to produce and purchase goods that we all need. There is even a plethora of tweets made by the man to validate my claims which can be found <a href="https://twitter.com/geoffreyhinton" title="Watch the Dev Log" role="button">here</a> and are included as images below.</p>
+                    <br>
+                    <img src="/img/Screenshot2024-01-26123900.png" style="width: 50%;" class="card-img-top" alt="Eye tracking software main screen">
+                    <br>
+                    <h5 class="mb-0">The Consequences</h5>
+                    <p class="card-text ml-4 mb-4 fs-6">Thinking about this, I can’t help but think about the speech presented by Neil Postman called “Five Things We Need to Know About Technological Change” which was delivered in 1998 by the man himself to a group of religious leaders and theologians in Denver, Colorado. In the second idea he talks about how despite what is preached the advantages and disadvantages of a new technology are never distributed evenly amongst the population. In the speech he says:</p>
+                    <br>
+                    <p class="card-text ml-4 mb-4 fs-6">"This leads to the second idea, which is that the advantages and disadvantages of new technologies are never distributed evenly among the population. This means that every new technology benefits some and harms others. There are even some who are not affected at all. … The questions, then, that are never far from the mind of a person who is knowledgeable about technological change are these: Who specifically benefits from the development of a new technology? Which groups, what type of person, what kind of industry will be favored? And, of course, which groups of people will thereby be harmed?"</p>
+                    <br>
+                    <p class="card-text ml-4 mb-4 fs-6">"These questions should certainly be on our minds when we think about computer technology. There is no doubt that the computer has been and will continue to be advantageous to large-scale organizations like the military or airline companies or banks or tax collecting institutions. And it is equally clear that the computer is now indispensable to high-level researchers in physics and other natural sciences. But to what extent has computer technology been an advantage to the masses of people? To steel workers, vegetable store owners, automobile mechanics, musicians, bakers, bricklayers, dentists, yes, theologians, and most of the rest into whose lives the computer now intrudes? These people have had their private matters made more accessible to powerful institutions. They are more easily tracked and controlled; they are subjected to more examinations, and are increasingly mystified by the decisions made about them. They are more than ever reduced to mere numerical objects. They are being buried by junk mail. They are easy targets for advertising agencies and political institutions."</p>
+                    <br>
+                    <p class="card-text ml-4 mb-4 fs-6">"In a word, these people are losers in the great computer revolution. The winners, which include among others computer companies, multi-national corporations and the nation state, will, of course, encourage the losers to be enthusiastic about computer technology. That is the way of winners, and so in the beginning they told the losers that with personal computers the average person can balance a checkbook more neatly, keep better track of recipes, and make more logical shopping lists. Then they told them that computers will make it possible to vote at home, shop at home, get all the entertainment they wish at home, and thus make community life unnecessary. And now, of course, the winners speak constantly of the Age of Information, always implying that the more information we have, the better we will be in solving significant problems--not only personal ones but large-scale social problems, as well. But how true is this? If there are children starving in the world--and there are--it is not because of insufficient information. We have known for a long time how to produce enough food to feed every child on the planet. How is it that we let so many of them starve? If there is violence on our streets, it is not because we have insufficient information. If women are abused, if divorce and pornography and mental illness are increasing, none of it has anything to do with insufficient information. I dare say it is because something else is missing, and I don't think I have to tell this audience what it is. Who knows? This age of information may turn out to be a curse if we are blinded by it so that we cannot see truly where our problems lie. That is why it is always necessary for us to ask of those who speak enthusiastically of computer technology, why do you do this? What interests do you represent? To whom are you hoping to give power? From whom will you be withholding power?"</p>
+                    <br>
+                    <p>You can find the whole speech <a href="https://student.cs.uwaterloo.ca/~cs492/papers/neil-postman--five-things.html" title="Watch the Dev Log" role="button"> here </a> for those who are interested in reading it.</p>
+                    <br>
+                    <p>All that being said, the advent and somewhat surreptitious growth of AI is something that we should be extremely cautious about. I find it incredibly disturbing that quite literally everyone I know in the computer industry works in some form or another with AI. This is especially disturbing given the fact that the creators themselves (like Geoffry Hinton) are warning of their existential threat to human engagement and existence. It’s similar in lore to the assembly line worker creating the robotic arm that would eventually render himself/herself obsolete. </p>
+                    <br>
+                    <p>To echo what Neil stated in his speech, we have to be aware of who specifically benefits from the new technology? Who will be favoured? And lastly who will be harmed? We should be aware of the biases and conflicts of interest of those who promote it. One current researcher and advocator of the field who comes to mind is Andrew Ng. It is very humorous that he even in fact commented on one of Geoffry’s tweets about the threat of his research saying stuff along the line that it discourages students from pursuing the field. Could he have made that comment due to the fact that he otherwise owns Coursera which charges people to learn about those very topics. Probably! </p>
+                    <br>
+                    <img src="/img/Screenshot2024-01-26124725.png" style="width: 50%;" class="card-img-top" alt="Andrew Ng">
+                    <br>
+                    <h5 class="mb-0">Conclusion</h5>
+                    <p>To conclude, these parallels to Mary Shelley’s novel make me very uneasy. No one can predict the future, especially in the ecosystem of human life, with the advent of a new technology of this magnitude. We have to be aware of the themes of the book in regards to these inventions; especially the consequences of playing god, and the dangers of unchecked scientific ambition. Whether regulation in the area could avoid future harms is yet to be known although I doubt it due to its uncertainty. In the novel, when Victor tries to take on the role of a divine power by creating life he never would have foreseen the consequences. These being ethical dilemmas, loss of humanity, political ramifications and psychological impact. Now in the modern age, in the advent of trying to harness human thought in the form of a computer most likely will have the same consequences. The final result is yet to be known.</p>    
+                    <p class="card-text ml-4 mb-4 fs-6" style="text-indent: 0px; font-weight: bold;">- Nicholas Ierfino</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-8 shadow-sm h-md-250 position-relative">
+                <div class="p-4 d-flex flex-column position-static">
+                    
+                    <h3 class="mb-0">Mean Reversion Trading Bot Implementation and Caveats</h3>
+                    <div class="mb-4 text-muted">Monday: November 6th, 2023</div>
+                    <br>
+                    <h5 class="mb-0">Preamble</h5>
+                    <p class="card-text ml-4 mb-4 fs-6">Ever since I opened my first trading account with the bank, I have been very eager to explore the realm of trading bots and their applications in trading securities. Doing part of my undergraduate education at the University of Waterloo further peaked my interest in the area given the fact that many students were able to find their fortune in regards to crypto securities (especially in the domain of arbitrage). For instance, the creator of Ethereum, Vitalik Buterin, even attended the university at one point before dropping out.</p>
+                    <br>
+                    <p class="card-text ml-4 mb-4 fs-6">Several years pass and having left the University of Waterloo to transfer to the University of Ottawa and subsequently graduating with a degree in Electrical Engineering I was able to amass quite a substantial knowledge in the facet of analyzing signals. The reason for this was mostly to analyze electrical signals but little did I know at the time the same methods also applied to any continuous/discrete time signal; one of those being stock tickers. Thus many of the statistical and random processes tools accrued such as Brownian motion, Monte Carlo methods, Chi-Square tests,  Maximum Likelihood Estimation, and so on could also be applied to that of a securities ticker.</p>
+                    <br>
+                    <p class="card-text  mb-4 fs-6">Financial freedom is something that I think most people aspire towards achieving. In the modern capitalistic market it is basic economics knowledge that supply and demand curves are governed by peoples willingness to pay. In a highly competitive market, the price is usually set (unless there is a monopoly) at the point where the supply and demand curves meet. This works the same way for the price of labour. The problem with this today is that the price that employers (suppliers) are willing to pay for certain labour (even in the realm of intellectual white collar jobs) has been decreasing very steadily since alternative cheaper options are becoming more readily available through the invention of AI based interpretive language models (IBM Watson and ChatGPT come to mind). That being said, I find it hard to sustain a decent standard of living solely based on working alone. I thought that trading could fill the gap.</p>
+                    <br>
+                    <h5 class="mb-0">The Strategy</h5>
+                    <p class="card-text ml-4 mb-4 fs-6">The question became what would be the best trading method that would balance risk verses return. I came across a video, produced by the vastly popular mathematics Youtube channel Numberphile, where they interviewed billionaire mathematician by the name of James Simons (the founder of the brokerage Renaissance Technologies). I learned that he was able to use mean reversion algorithmic based strategies to substantiate most of his wealth.</p>
+                    <br>
+                    <p class="card-text ml-4 mb-4 fs-6">I was able to find a paper on a specific type of mean reversion strategy called the Passive Aggressive Mean Reversion Strategy (the paper is linked here: <a href="https://link.springer.com/article/10.1007/s10994-012-5281-z" title="Watch the Dev Log" role="button">PAMR paper</a>). I highly suggest that you read the paper, <b>especially before reading the rest of the blog</b>, if you want to get a relatively intuitive understanding of mean reversion as a whole (especially sections 2 and 4.1). The essence of the strategy is that most stocks operate under the assumption that they will always revert back to their average. That being said, if one were to the use the buy and hold strategy (buy a security and leave it in there for a long period of time), then they will not gain or lose as the stock will revert back approximately to it’s original value. This assumption does not always hold so some thought needs to be taken in choosing the securities that most abide by this assumption.</p>
+                    <br>
+                    <h5 class="mb-0">Things that Were Not Mentioned in the Paper</h5>
+                    <p class="card-text ml-4 mb-4 fs-6">There were factors that were not taken into account in the paper. The parameter called the aggressiveness parameter (C) and the sensitivity parameter (ε) were just arbitrarily chosen for the testing portion of the paper to be 0.5 for ε and 500 for C. In the paper it says that the best values for these are usually dataset dependent. Therefore, I was thinking of creating a reinforcement based neural network where the reward signal is the return accumulated on investment and the degrees of freedom are the C and ε parameters.</p>
+                    <br>
+                    <p class="card-text ml-4 mb-4 fs-6">One other factor that the paper failed to account for was the fact that most securities can only trade in discrete values (one cannot buy decimal portions of a stock for example). Thus, once the wealth proportion (bt) is calculated and the amount of stocks that need to be bought based on that wealth proportion is determined it is usually a fraction. I came up with a strategy that would liquidate as much money as possible such that it was kept to a minimum and most of the money was tied up in the security during the trading day.</p>
+                    <br>
+                    <p class="card-text ml-4 mb-4 fs-6">The problem statement goes as follows: <i>solve for the total amount (Ai) of money that should be placed into each stock given that you can only buy a discrete (whole number of 1) portion of a stock, the given wealth proportion of b for that trading day and the original investment for the beginning of the day, So.</i></p>
+                    <br>
+                    <p class="card-text ml-4 mb-4 fs-6">The solution that I proposed involves first organizing all of the stocks from largest to smallest. Then check the total remaining amount of money to see if it is larger than the largest stock. If it is not move onto the next stock. If it is more than the price of the security buy a discrete amount of that stock before recalculating the remaining amount of money and moving onto the next most expensive stock. Continue until all of the stocks are checked.</p>
+                    <br>
+                    <p class="card-text ml-4 mb-4 fs-6">The pseudocode is as follows:</p>
+                    <br>
+                    <pre class='brush: cpp'>
+                    Xi = stock price
+                    Ai = (bi*So)/Xi
+                        
+                    Ai will be a fraction. We have to truncate the fraction.
+                    ai (little a) will be the fraction portion of the stock 
+                    
+                    Y = amount that is left 
+                    Y = (a1*X1) + (a2*X2) + ….
+                    
+                    Organize the stock prices in a sequence from largest to smallest (vi). 
+                    Now compare Y to the first stock: 
+                    
+                    If Y < v1 
+                    Move on to the next vi 
+                    Else if Y >= vi 
+                    Take the modulo of Y and vi. Buy the amount of the mod of vi. 
+                    Calculate the amount of cash left: 
+                    Y := Y-modamount*vi
+                    
+                    If Y < v2
+                    Move on to the next vi 
+                    Else if Y >= vi 
+                    Take the modulo of Y and vi. Buy the amount of the mod of vi. 
+                    Calculate the amount of cash left: 
+                    Y := Y-modamount*vi
+
+                    ...
+                    </pre>
+                    <br>
+                    <h5 class="mb-0">The API</h5>
+                    <p>I used the Interactive Broker Trader Workstation API to implement the algorithm. Specifically the language used was C++. I think the API is quite powerful although the C++ implementation shipped with some built in library issues.</p>
+                    <br>
+                    <p>Currencies deal with decimal fractional values quite often, especially since all currencies have two decimal points of accuracy. The double floating point representation does not deal with some of these decimal fractional points well. For example, 0.3 can be represented most accurately as 0.299999999999999988897769. This can be an issue when submitted orders for various securities.</p>
+                    <br>
+                    <p>As a solution around this, the API includes a library that allows one to use Decimal floating-point arithmetic according to IEEE 754-2008. The libraries can be found on Intel’s website at <a href="https://www.intel.com/content/www/us/en/developer/articles/tool/intel-decimal-floating-point-math-library.html" title="Watch the Dev Log" role="button">this link</a>.</p>
+                    <br>
+                    <p>The API shipped with this library built in although for some reason it did not work when compiling. Therefore, I had to download the code from the link previously provided and compile/assemble them myself using the batch files provided in the download. This ended up fixing the issue.</p>
+                    <br>
+                    <h5 class="mb-0">Conclusion</h5>
+                    <p>To conclude, there is still a lot of work that needs to be done. The bot needs to be tested using real-time market data to ensure that it can sustain a reasonable gain. I am thinking on doing a test for approximately 10 weeks. Also, there has to be improvements; as I mentioned earlier, I am thinking of training a reinforcement based neural network to increase gain where the values of C and ε are the two degrees of freedom. Lastly, I want to make new bots for different strategies and pit them against one another such that I can see which one is best under various market conditions. This may take a lot of extra work so hopefully I can get some extra hands to work on these projects with me soon.</p>    
+                    <p class="card-text ml-4 mb-4 fs-6" style="text-indent: 0px; font-weight: bold;">- Nicholas Ierfino</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-dark">
+        <div class="container text-center">
+          <span class="text-white">Created by Antonio LaPlaca with <a class="text-white" href="https://getbootstrap.com">Bootstrap</a> and licensed to and modified by Nicholas Ierfino.</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

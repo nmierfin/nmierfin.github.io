@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<!-- Website SVG From https://www.svgrepo.com/svg/209654/cpu-chip -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nicholas Ierfino - GIS Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Custom Styles and Overrides -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;300;400;500;600;700&family=Patua+One&display=swap" rel="stylesheet"> 
+
+    <!-- Website Title Icon -->
+    <link rel="shortcut icon" href="img/cpu.png" type="image/x-icon">
+</head>
+
+<body id="gis" class="bg-light d-flex flex-column h-100">
+
+    <!-- NavBar -->
+    
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    
+        <div class="container">
+            <a class="navbar-brand my-auto" href="index.html">
+                <img id="home" class="d-inline-block align-text-bottom" src="/img/cpu.svg" alt="CPU Chip Logo" width="50"
+                    viewBox="0 0 100 100">
+                <h2 class="d-inline-block mx-2 mb-0">Nicholas Ierfino</h2>
+            </a>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="nav nav-tabs navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-expanded="false">Projects</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="cs.html">Engineering</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="other.html">Other</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="skills.html">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="edu.html">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <!-- Image of Men sitting and standing infront of Computer Screen from https://t4.ftcdn.net/jpg/01/71/46/71/360_F_171467111_bJ5lbsQwVl9JgwEDUwYq1cVCDgQWjs7B.jpg -->
+    <div id="hero" class="p-5 mb-4 bg-dark text-light">
+        <div class="container py-5">
+            <h1 class="display-5">Geographical Information Systems</h1>
+            <p class="col-md-8 fs-4">Through my skills attained from Computer Science, I have been able to excel in this field of data and sattellite imagery manipulation. I have achieved top of my class in all of my final projects. I love analyzing patterns and discovering new facts, which motivates me when I apply myself to this field of discovery and display.
+            </p>
+        </div>
+    </div>
+
+    <!-- Project Cards -->
+    <div class="container mb-3">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card">
+                <a href="https://github.com/TTSApplications/Pollution_NY_Area/blob/master/Pollution_in_NY_Area.pdf" title="Read the Project" role="button">
+                <img src="/img/nyProject.png" class="card-img-top" alt="Image of a Map with Clustering Regions">
+                <div class="card-body">
+                  <h5 class="card-title">Predicting Pollutants around New York</h5>
+                  <p class="card-text">The title officially called "Predicting NO<sub>2</sub>, O<sub>3</sub>, PM<sub>2.5</sub> and Clustering Regions with Similar Traits in New York and Contiguos States (2016)" was a final project completed from March to April 2020. We focused on predicting the levels of each of these air pollutants in our study area where there were lack of monitoring stations using High-Level Statistical & Spatial Analysis. This project recieved a mark of <span class="badge text-bg-success">98%</span>.</p>
+                </div>
+                </a>
+              </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                  <a href="https://github.com/TTSApplications/Desertification_Russia/blob/master/Desertification_Volgograd_Russia.pdf" title="Read the Project" role="button">
+                  <img src="/img/desertRussia.png" class="card-img-top" alt="TGSI Value Map of Volgograd Russia">
+                  <div class="card-body">
+                    <h5 class="card-title">Desertification in Russia</h5>
+                    <p class="card-text">The title officially called "Determining the Presence of Desertification between 1999 and 2019 in Volgograd Russia using NDVI, NDMI, and TGSI" was a final project completed in April 2020. In 1999, Volgograd Russia began a civic effort to reduce desertification and revitalize their agricultural land. We performed an analysis over a span of 20 years that determined how the efforts fared, and whether any progress had been made. This project recieved a mark of <span class="badge text-bg-success">96%</span>.</p>
+                  </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <a href="https://github.com/TTSApplications/Toronto-2011-Data-Maps" title="See on GitHub" role="button">
+                  <!-- Image of Toronto Data Map from http://www.livingintoronto.com/userfiles/images/Toronto-Real-Estate-Home-Prices-Map.png -->
+                  <img src="/img/torontoPrices.png" class="card-img-top" alt="An Agile Scrum Flow Diagram">
+                  <div class="card-body">
+                    <h5 class="card-title">Toronto House Price Analaysis</h5>
+                    <p class="card-text">A project designed for new house buyers in Toronto. I used census data and processed that data to see how affordable homes were based on multiple pre-assigned criteria, as well as one critera of my own. I decided to study housing prices in related to children density, so new families would be able to see where other families are purchasing homes in Toronto, which may imply the pricing may be lower since families are more price conscientious as they require houses with more rooms and space.</p>
+                  </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+    </div>
+        
+    
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-dark">
+        <div class="container text-center">
+          <span class="text-white">Created by Antonio LaPlaca with <a class="text-white" href="https://getbootstrap.com">Bootstrap</a> and licensed to and modified by Nicholas Ierfino.</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

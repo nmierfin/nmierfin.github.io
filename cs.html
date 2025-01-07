@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<!-- Website SVG From https://www.svgrepo.com/svg/209654/cpu-chip -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nicholas Ierfino - Computer Science & Engineering Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Custom Styles and Overrides -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;300;400;500;600;700&family=Patua+One&display=swap" rel="stylesheet"> 
+
+    <!-- Website Title Icon -->
+    <link rel="shortcut icon" href="img/logo-no-background.png" type="image/x-icon">
+</head>
+
+<body id="cs" class="bg-light d-flex flex-column h-100">
+
+    <!-- NavBar -->
+    
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    
+        <div class="container">
+            <a class="navbar-brand my-auto" href="index.html">
+                <img id="home" class="d-inline-block align-text-bottom" src="/img/logo-no-background.png" alt="CPU Chip Logo" width="50"
+                    viewBox="0 0 100 100">
+                <h2 class="d-inline-block mx-2 mb-0">Nicholas Ierfino</h2>
+            </a>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="nav nav-tabs navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-expanded="false">Projects</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="cs.html">Engineering</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="other.html">Other</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="skills.html">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="edu.html">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <!-- Image of Computer Screen with Code from https://al.nd.edu/assets/380450/1000x562/bacs_code.jpg -->
+    <div id="hero" class="p-5 mb-4 bg-dark text-light">
+        <div class="container py-5">
+            <h1 class="display-5">Electrical Engineering</h1>
+            <p class="col-md-8 fs-4">“Engineering, electrical and mechanical, is positive in results. There is scarcely a subject that cannot be mathematically treated and the effects calculated or the results determined beforehand from the available theoretical and practical data. The carrying out into practise of a crude idea as is being generally done is, I hold, nothing but a waste of energy, money and time.” - Nikola Tesla </p>
+        </div>
+    </div>
+
+    <!-- Project Cards -->
+    <div class="container mb-3">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card">
+                <!-- Image of CPU from https://cdn-learn.adafruit.com/guides/images/000/001/956/medium800/mac-logic.JPG -->
+                <a href="https://github.com/nmierfin/Mentorship2016_EyeTrackingCommunication" title="Watch the Dev Logs" role="button">
+                <img src="/img/Eye_Tracking.jpg" class="card-img-top" alt="Eye tracking software main screen">
+                <div class="card-body">
+                  <h5 class="card-title">Pupil Tracking Communication Software for Non-Verbal Individuals</h5>
+                  <p class="card-text">I built a software application that would allow stroke patients suffering from complete paralysis, other than eye movement, to move a cursor on the screen using their eyes. The program allowed them to click and communicate on the screen using a virtual keyboard and prompts. This was done using linear adaptive filtering techniques using the coding language C++ in conjunction with OpenCV libraries on Visual Studio.</p>
+                </div>
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <!-- Image of REST API Diagram from https://www.astera.com/wp-content/uploads/2020/01/rest.png -->
+                <img src="/img/AutoCadDrawing.png" class="card-img-top" alt="AutoCAD drawing of chicane in Pelham">
+                <div class="card-body">
+                  <h5 class="card-title">Site Service Plan for Chicane on Haist Street in Pelham</h5>
+                  <p class="card-text">I drafted a site service pland for a chicane on Haist street in Pelham, Ontario. The purpose of the plan was to submit it to the city so that city council can determine whether it needed to be removed (due to multiple complaints). I used AutoCAD for the plan where I maintained scale and accuracy of the chicane as well as the surrounding areas.</p>
+                </div>
+              </div>
+            </div>
+             <div class="col">
+                <div class="card">
+                  <!-- Image of React Logo from https://miro.medium.com/max/1050/1*i3hzpSEiEEMTuWIYviYweQ.png -->
+                  <a href="https://github.com/nmierfin/PowerWorld_Simulation/blob/main/Power_Tranmission_System.pdf" title="Watch the Dev Log" role="button">
+                  <img src="/img/PowerWorldSimulation.PNG" class="card-img-top" alt="PowerWorld simulation picture">
+                  <div class="card-body">
+                    <h5 class="card-title">PowerWorld Simulation for Solar Farm and Smart Grid Utilization</h5>
+                    <p class="card-text">I designed a makeshift power grid utilizing the PowerWorld Simulator. This involved the sizing and design of the production, transmission and distribution (substation) of power to the customer. I had to size the solar panels needed for the production. In addition to this, I sized cables for three-phase transmission at 100kV, 500MVA. On top of that, I had to size transformers for stepping up and down voltage. Lastly, safety systems had to be put in place, such as lightning arresters, fuses, circuit breakers and relays to prevent faults in the larger grid. </p>
+                  </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <!-- Image of Scrum Flow Diagram from https://kruschecompany.com/wp-content/uploads/2021/09/Agile-software-development-with-Scrum-blog-cover-image-1280x595.jpg -->
+                  <img src="/img/microsoft-sql-server-logo-png-transparent.png" class="card-img-top" alt="Microsoft SQL Server Logo">
+                  <div class="card-body">
+                    <h5 class="card-title">Microsoft SQL Database Creation and Maintenance</h5>
+                    <p class="card-text">For the steel company, Dofasco, in Hamilton, I had to update many of the legacy Microsoft Accesss databases to the current implementation of Microsoft SQL Server. Data integrity had to be maintained across the hundreds of databases for the Materials Handling and Logistics part of the company.</p>
+                  </div>
+                </div>
+              </div>
+              
+
+              <div class="col">
+                <div class="card">
+                  <!-- Image of Scrum Flow Diagram from https://kruschecompany.com/wp-content/uploads/2021/09/Agile-software-development-with-Scrum-blog-cover-image-1280x595.jpg -->
+                  <img src="/img/Schematic-of-additive-manufacturing-processes-based-on-laser-cladding.png" class="card-img-top" alt="Schematic for additive manufacturing process">
+                  <div class="card-body">
+                    <h5 class="card-title">Laser Consolidation System</h5>
+                    <p class="card-text">Designed the code for a metal power feeder and laser using Visual Basic on Visual Studio for the National Research Council. The system utilized a metal powder feeder, laser and motion setup for advanced 3d printing metal manufacturing. The program had to control paramters such as metal type, flow rate, laser intensity, etc. The system utilized g-code to move a cnc machine to draw out the manufactured item. I can't provide code for this system because it is proprietary to the NRC.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card">
+                  <a href="https://github.com/nmierfin/CardCountingSimulator" title="Watch the Dev Log" role="button">
+                  <!-- Image of Scrum Flow Diagram from https://kruschecompany.com/wp-content/uploads/2021/09/Agile-software-development-with-Scrum-blog-cover-image-1280x595.jpg -->
+                  <img src="/img/other-blackjack-1280x720.jpg" class="card-img-top" alt="Blackjack game in progress">
+                  <div class="card-body">
+                    <h5 class="card-title">Card Counting Hi-Lo Method Simulator</h5>
+                    <p class="card-text">I designed a hi-lo card counting simulator that would test the relative frequency of winning in blackjack for various amounts of decks and configurations. This would determine if the house or the player has the edge in regards to the methodology as well as deck configuration.</p>
+                  </div>
+                  </a>
+                </div>
+              </div>
+
+
+              <div class="col">
+                <div class="card">
+                  <a href="https://github.com/nmierfin/HCS12HomeAlarmSystem" title="Watch the Dev Log" role="button">
+                  <!-- Image of Scrum Flow Diagram from https://kruschecompany.com/wp-content/uploads/2021/09/Agile-software-development-with-Scrum-blog-cover-image-1280x595.jpg -->
+                  <img src="/img/Drago12P_68HC12_EVB.jpg" class="card-img-top" alt="Blackjack game in progress">
+                  <div class="card-body">
+                    <h5 class="card-title">Home Alarm System</h5>
+                    <p class="card-text">I coded a home alarm system in C that utilized the Freescale/Motorola HCS12. The program involved arming the system using a keypad. When the system is armed by typing in the passcode the alarm can be tripped by tripping a sensor. This will activate an interupt that causes an alarm to sound. The alarm can be disarmed by typing in the same passcode. It also utilized a 7 segment display that showed the passcode when typed.</p>
+                  </div>
+                  </a>
+                </div>
+              </div>
+            
+            
+            <div class="col">
+                <div class="card">
+                  <a href="https://github.com/nmierfin/EG4912_Project" title="Watch the Dev Log" role="button">
+                  <!-- Image of Scrum Flow Diagram from https://kruschecompany.com/wp-content/uploads/2021/09/Agile-software-development-with-Scrum-blog-cover-image-1280x595.jpg -->
+                  <img src="/img/Capstone.PNG" class="card-img-top" alt="Capstone demonstration">
+                  <div class="card-body">
+                    <h5 class="card-title">Engineering Capstone Design Project</h5>
+                    <p class="card-text">I started my capstone design project that involves helping those to use the computer screen using only portions of the face. The design involves using deep learning algorithms such as cascaded neural networks to trigger certain mouse events.</p>
+                  </div>
+                  </a>
+                </div>
+              </div>
+
+            <div class="col">
+              <div class="card">
+                <a href="https://github.com/jarvisbast/MicrowaveAmplifier" title="Watch the Dev Log" role="button">
+                <img src="/img/microwave amplifier.jpg" class="card-img-top" alt="Microwave Amplifier Circuit">
+                <div class="card-body">
+                  <h5 class="card-title">Microwave Amplifier Design</h5>
+                  <p class="card-text">I have designed, simulated, built, and tested a microwave amplifier at 3.1 GHz frequency in a 50Ω system. To design the circuit, NI-AWR Microwave Office was utilized. The input and output matching networks were designed using open circuited shunt stubs since they can be easily fabricated and allow some tuning. I have calculated the maximum gain of the BJT from the given S parameters in the data sheet, ensured that the amplifier is stable over the entire useful bandwidth of the device, minimized S11 and S22, and maximized the bandwidth. The circuit was then fabricated with RT/Duroid 5880 with a dielectric thickness of 787.41µm. In the final step, I assembled and mounted the circuit on the microwave test jig and tested it with a VNA.</p>
+                </div>
+                </a>
+              </div>
+            </div>
+
+             <div class="col">
+              <div class="card">
+                <a href="https://github.com/jarvisbast/LinearAntennaArray" title="Watch the Dev Log" role="button">
+                <!-- Image of Scrum Flow Diagram from https://kruschecompany.com/wp-content/uploads/2021/09/Agile-software-development-with-Scrum-blog-cover-image-1280x595.jpg -->
+                <img src="/img/array antenna.jpg" class="card-img-top" alt="4 Element Linear Antenna Array">
+                <div class="card-body">
+                  <h5 class="card-title">4 Element Microstrip Patch Linear Antenna Array</h5>
+                  <p class="card-text">Utilized NI-AWR Microwave Office to design a microstrip patch antenna element and implemented a 4 element linear array with 5.2GHz frequency. The substrate used in the design is RT/Duroid 5880 with a dielectric thickness of 1.574mm. I have calculated, simulated, and measured the electric field in various planes of polarization and the S parameters. I maximized the input return loss at port 1 of the feed network to ensure that the power from the generator will enter the feed network and be available to the antenna patches. In addition to that I made sure that the array design was matched to 50 Ω with zero reactance, zero reflection, and full transmission.</p>
+                </div>
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <!-- Image of React Logo from https://miro.medium.com/max/1050/1*i3hzpSEiEEMTuWIYviYweQ.png -->
+                <!-- <a href="https://github.com/nmierfin/PowerWorld_Simulation/blob/main/Power_Tranmission_System.pdf" title="Watch the Dev Log" role="button">-->
+                <img src="/img/pcb_layout.png" class="card-img-top" alt="PCB layout image">
+                <div class="card-body">
+                  <h5 class="card-title">PCB Design for Motor Control System</h5>
+                  <p class="card-text">Utilized Altium to design 4 layers PCB layout for the brushless DC motor driver board for an electric vehicle. Completed calculations and design simulations to assess power needs and choose optimal components for the circuit. Developed applications and modifications for electronic properties used in components, products, or systems to improve techinical performance. </p>
+                </div>
+                </a>
+              </div>
+            </div>
+            
+            </div>
+          </div>
+        </div>
+    </div>
+        
+    
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-dark">
+        <div class="container text-center">
+          <span class="text-white">Created by Antonio LaPlaca with <a class="text-white" href="https://getbootstrap.com">Bootstrap</a> and licensed to and modified by Nicholas Ierfino.</span>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
